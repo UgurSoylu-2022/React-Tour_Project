@@ -1,4 +1,4 @@
-@import "../../../sass/reset", "../../../sass/variable";
+@import "../../../sass/mixins", "../../../sass/variable";
 .navbar{
     display: flex;
     justify-content:space-evenly;
@@ -14,5 +14,18 @@
             background-color: $backgroundColor;
             color: $cardNavBgColor
         }
+    }
+}
+
+@include media-xsm{
+    .navbar{
+        flex-direction: column;
+        text-align: center;
+    }
+}
+@include media-sm{
+    .navbar{
+        flex-direction: row;
+        // text-align: center;
     }
 }

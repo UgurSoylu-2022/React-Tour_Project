@@ -1,0 +1,60 @@
+@import "../../../sass/reset","../../../sass/variable";
+
+.card_container{
+    display: flex;
+// flex-direction: column;
+flex-wrap: wrap;
+justify-content:space-evenly;
+align-items: center;
+
+.card{
+    background-color: $cardNavBgColor;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 1rem;
+    padding: 1rem;
+    width: 500px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.7);
+    // align-items: center;
+    // justify-content: center;
+
+    position: relative;
+    &:hover p{
+        transform: translateY(0%);
+    }
+    overflow:hidden;
+    
+    h3{
+        color: $backgroundColor;
+        font-size:2rem;
+    }
+
+    img{
+        max-width: 500px;
+        height: 350px;
+        border-radius: 10px;;
+        object-fit: cover;
+        // filter: grayscale(0%);
+        &:hover{
+            filter: grayscale(100%)
+        }
+    }
+    p{
+        color: white;
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(0,0,0,0.5);
+        font-size: 1.5rem;
+        padding: 1rem;
+        transform: translateY(100%);
+        z-index: 1;
+        transition: transform 0.7s ease-in-out;
+        
+    }
+
+}
+}
